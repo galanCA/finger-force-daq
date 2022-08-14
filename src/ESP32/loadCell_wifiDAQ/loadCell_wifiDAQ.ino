@@ -2,6 +2,7 @@
 #include "HX711.h"
 #include <WiFi.h>
 #include "esp_timer.h"
+#include "./../../../config.h"
 
 /** Macro **/
 #define _DEBUG
@@ -13,12 +14,12 @@
 
 /** WiFi constants **/
 // Router definitions
-const char * networkName = "";
-const char * networkPswd = "";
+const char * networkName = WIFI_SSID;
+const char * networkPswd = WIFI_PASSWORD;
 
 // Host
-const char * host = "";
-const int port = 3333;
+const char * host = HOST_CONNECTION;
+const int port = PORT_CONNECTION;
 
 /** Sensor definitions **/ 
 #define calibration_factor -9830
